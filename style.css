@@ -34,12 +34,18 @@
     padding: 20px;
     background: linear-gradient(to right, #c1c1c1, #000000);
 
-    & li {
-    display: inline;
-    margin-right: 30px; 
-    
+    & ul {
+        display: flex;
+        list-style: none;
+        padding: 0px;
         
     }
+
+    & li {
+        margin-right: 40px
+    }
+
+    
     & li a{
     text-decoration: none;
     font-size: 25px;
@@ -52,7 +58,7 @@
 .topicos li a:hover {
     background-color: #c1c1c1;
     color: black;
-    padding: 2px;
+    padding: 0px;
     border-radius: 10px;
 }
 
@@ -205,12 +211,11 @@ footer{
     margin-top: 50px;
     margin-bottom: 0;
     padding: 20px;
-    background: linear-gradient(to left, #c1c1c1, #000000);
     
-    & h1 {
+    & h2 {
     font-size: 25px;
     text-transform: uppercase;
-    color: white;
+    color: black;
     font-family: "Bona Nova SC", serif;
     }
 
@@ -223,18 +228,57 @@ footer{
     
 }
 
+.contato {
+
+    margin-top: 30px;
+    margin-bottom: 5px;
+
+    & form input {
+        display: block;
+        width: 320px;
+        margin-bottom: 8px;
+        padding: 8px;
+        resize: none;
+        font-family: "roboto", sans-serif;
+    }
+    & form textarea {
+        display: block;
+        width: 320px;
+        margin-bottom: 8px;
+        padding: 8px;
+        resize: none;
+        font-family: "roboto", sans-serif;
+    }
+    & form button {
+        display: block;
+        width: 320px;
+        margin-bottom: 8px;
+        padding: 8px;
+        resize: none;
+        font-family: "Bona Nova SC",  sans-serif;
+        font-size: 20px;
+        background-color: rgb(23, 22, 22);
+        color: #ffffff;
+        border: none;
+    }   
+}
+
+.contato form button:hover{
+    color: black;
+    background-color: #c1c1c1;
+}
 
 .animacao {
 
     font-size: 25px;
     text-transform: uppercase;
     color: black;
-    font-family: "Bona Nova SC", serif;
-    border-right: 2px solid;
+    font-family: "Bona Nova SC",  sans-serif;
+    border-right: 1px solid;
     white-space: nowrap;
-    width: 15ch;
+    width: 14ch;
     overflow: hidden;
-    animation: animaTexto steps(15) 1s, animaMarcador 0.5s linear infinite;
+    animation: animaTexto steps(13) 1s, animaMarcador 0.5s linear infinite;
     margin-top: 5px;
 
 }

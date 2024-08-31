@@ -27,7 +27,6 @@
     }   
 }
 .topicos {
-    display: flex;
     justify-content: right;
     margin-top: 0;
     margin-bottom: 0;
@@ -37,29 +36,24 @@
     & ul {
         display: flex;
         list-style: none;
-        padding: 0px;
-        
+        justify-content: space-around;
     }
 
-    & li {
-        margin-right: 40px
-    }
-
-    
     & li a{
     text-decoration: none;
     font-size: 25px;
     color: #ffffff;
     text-transform: uppercase;
     font-family: "Bona Nova SC", serif;
+    padding: 0 20px;
     }  
 }
 
 .topicos li a:hover {
     background-color: #c1c1c1;
     color: black;
-    padding: 0px;
     border-radius: 10px;
+    transition: 0.3s;
 }
 
 .fotos {
@@ -153,8 +147,7 @@
         text-align: center;
         width: 300px;
         font-family: "roboto", sans-serif;
-        font-size: 16px; 
-        
+        font-size: 16px;     
     }
 
     & .cabecalho {
@@ -163,8 +156,6 @@
         font-size: bolder;
         background-color:rgb(23, 22, 22);
         color: white;
-        
-    
     }
 
     & .pos {
@@ -182,9 +173,7 @@
         text-transform: uppercase;
         font-size: bolder;
         background-color:rgb(23, 22, 22);
-        color: white;
-        
-        
+        color: white; 
     }
 
 
@@ -228,46 +217,6 @@ footer{
     
 }
 
-.contato {
-
-    margin-top: 30px;
-    margin-bottom: 5px;
-
-    & form input {
-        display: block;
-        width: 320px;
-        margin-bottom: 8px;
-        padding: 8px;
-        resize: none;
-        font-family: "roboto", sans-serif;
-    }
-    & form textarea {
-        display: block;
-        width: 320px;
-        margin-bottom: 8px;
-        padding: 8px;
-        resize: none;
-        font-family: "roboto", sans-serif;
-    }
-    & form button {
-        display: block;
-        width: 320px;
-        margin-bottom: 8px;
-        padding: 8px;
-        resize: none;
-        font-family: "Bona Nova SC",  sans-serif;
-        font-size: 20px;
-        background-color: rgb(23, 22, 22);
-        color: #ffffff;
-        border: none;
-    }   
-}
-
-.contato form button:hover{
-    color: black;
-    background-color: #c1c1c1;
-}
-
 .animacao {
 
     font-size: 25px;
@@ -280,7 +229,22 @@ footer{
     overflow: hidden;
     animation: animaTexto steps(13) 1s, animaMarcador 0.5s linear infinite;
     margin-top: 5px;
+}
 
+footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 0;
+    padding: 20px;
+    background: linear-gradient(to left, #c1c1c1, #000000);
+    font-size: 25px;
+    text-transform: uppercase;
+    font-family: "Bona Nova SC", serif;
+
+    & h2 {
+        color: white;
+    }
 }
 
 @keyframes animaMarcador {
@@ -295,69 +259,163 @@ footer{
     }
 }
 
-@media (max-width: 600px) {
+@media(max-width: 900px) {
+
+    .container {
+        width: 100%;
+        overflow: hidden;
+    }  
+
     .header {
-    flex-direction: column;
-    align-items: flex-start;
-    }
-    .header .logotitle {
-    font-size: 30px;
-    }
-    .topicos {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px;
+
+        & img {
+            width: 30px;
+            margin-right: 15px;
+        }
+        & .logotitle {
+            display: flex;
+            align-items: center;
+            font-size: 20px;  
+            margin: 10px 30px 10px 10px;          
+        }   
     }
 
-    .topicos li {
-    margin-bottom: 10px;
-    margin-right: 0;
+    .topicos {
+        width: 100%;
+        padding: 8px 10px 8px 10px;
+
+        & ul {
+            display: flex;
+            list-style: none;
+            justify-content: space-around;
+        }
+    
+        & li {
+            margin: 0;
+        }
+    
+        & li a{
+        font-size: 15px;
+        }  
     }
-    .topicos li a {
-    font-size: 20px;
+
+    .animacao {
+        font-size: 12px;
+        margin: 5px 0 5px 10px;
     }
 
     .fotos {
-    flex-direction: column;
-    align-items: center;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        
+        & img {
+            width: 110px;
+            margin: 0 10px 10px 10px;
+        }
     }
+    
+    .historia{  
+        
+        font-family: "Roboto", sans-serif;
+    
+        & h2 {
+            margin: 10px 0 10px 10px;
+            font-size: 13px;
+        }
 
-    .fotos img {
-    width: 100%;
-    margin-right: 0;
+        & p {
+            font-size: 12px;
+            padding: 0px 10px 0px 10px;
+        }
     }
-
     .topicos2 {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px;
+        margin: 10px auto;
+        padding: 8px 10px 8px 10px;
+        font-size: 18px;
     }
 
     .titulo {
-    font-size: 20px;
+        font-size: 15px;
+    }
+    
+    .subtitulo {
+        width: 100%;
+        padding: auto 10px auto 10px;
+        
+        & tr, td {
+            border: 1px solid black;
+            padding: 2px 2px;
+            width: 100px;
+            font-size: 12px;    
+            text-align: center;     
+        }
+        & .cabecalho {
+            font-size: 20px;
+            padding: 0;
+        }
+    
+        & img {
+            width: 20px;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+        }    
+    }
+    .subtitulo2 {
+        margin: 0;
+
+        & tr, td {
+            border: 1px solid black;
+            padding: 4px 4px;
+            width: 200px;
+            font-size: 12px;    
+            text-align: center; 
+            white-space: nowrap;
+            margin: 0;   
+        }
+        & .cabecalho {
+            font-size: 20px;
+            padding: 0;
+            margin: 0;
+        }
+    
+        & img {
+            width: 10px;
+            align-items: center;
+            padding: 0;
+            margin-right: 5px;
+        }
+
+        & .pos2 {
+        font-size: 11px;
+        }
     }
 
-    .subtitulo, .subtitulo2 {
-    flex-direction: column;
-    align-items: center;
-    }
-
-    .subtitulo img, .subtitulo2 img {
-    width: 100%;
-    margin-right: 0;
+    .center {
+        display: flex;
+        flex-direction: column;
+        margin: 10px auto 10px 50px;
     }
 
     footer {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    }
+        display: flex;
+        margin: 15px auto 0 10px;
+        padding: 2px 4px;
+        align-items: center;
 
-    footer h1 {
-    font-size: 20px;
-    }
+        & div {
+            display: flex;
+            justify-content: right;
+        }
 
-    footer img {
-    margin: 10px 0;
+        & h2 {
+            font-size: 12px;
+        }
+        
+        & img {
+            width: 25px;
+        }
     }
 }
+

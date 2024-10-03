@@ -1,421 +1,477 @@
-* {margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  color: white;
 }
 
-.container {
-    max-width: 1280px;
-    width: 100%;
-    margin: 0 auto;
+body{
+  background-color: #1d1d1d;
 }
-.header {
 
-    border-bottom: solid black 5px;
+header {
+  width: 100%;
+
+  & .logo-icon{
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    
+    justify-content: space-between;
+    /* border: 1px solid white; */
+
+    & .icon{
+      overflow: visible;
+      display: flex;
+      /* border: 1px solid white; */
+      padding: 10px 10px;
+      gap: 10px;
+    }
+  }
+
+  & .logo{
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+
     & img {
-        width: 50px;
-        margin-right: 30px;
+      width: 70px;
+      margin-right: 30px;
     }
-    & .logotitle {
-        display: flex;
-        align-items: center;
-        font-size: 50px;            
-    }   
-}
-.topicos {
-    justify-content: right;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding: 20px;
-    background: linear-gradient(to right, #c1c1c1, #000000);
+    
+    & h1{
+      font-size: 50px;
+    }
+  }
 
+  & nav{
+    border-top: 1px solid white;
+    background: linear-gradient(to right, #c1c1c1a2, #000000);
+    
     & ul {
-        display: flex;
-        list-style: none;
-        justify-content: space-around;
+      display: flex;
+      list-style: none;
+      justify-content: space-around;
     }
 
-    & li a{
-    text-decoration: none;
-    font-size: 25px;
-    color: #ffffff;
-    text-transform: uppercase;
-    font-family: "Bona Nova SC", serif;
-    padding: 0 20px;
-    }  
-}
+    & li{
+      padding: 10px 0;
+    }
 
-.topicos li a:hover {
+    & li a {
+      text-decoration: none;
+      font-size: 25px;
+      color: #ffffff;
+      text-transform: uppercase;
+      font-family: "Bona Nova SC", serif;
+      padding: 0 20px;
+    }
+  }
+
+  & li a:hover{
     background-color: #c1c1c1;
     color: black;
     border-radius: 10px;
     transition: 0.3s;
+  }
 }
 
 .fotos {
-    display: flex;
-    margin-top: 1rem;
-    
-    
-    & img {
-        width: 380px;
-        margin-right: 70px;
-        margin-bottom: 30px;
-    }
-}
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
 
-.historia{  
-    
-    font-family: "Roboto", sans-serif;
-
-    & h2 {
-        margin-top: 15px;
-        margin-bottom: 15px;
-        font-family: "Bona Nova SC", serif;
-        text-transform: uppercase;
-        font-size: 20px;
-    }
-}
-
-.topicos2 {
-    display: flex;
-    justify-content: left;
-    margin-top: 20px;
-    margin-bottom: 0;
-    padding: 20px;
-    background: linear-gradient(to left, #c1c1c1, #000000);
-    font-size: 25px;
-    text-transform: uppercase;
-    color: white;
-    font-family: "Bona Nova SC", serif;
-}
-
-.titulo {
-    display: flex;
-    justify-content: center;
-    font-size: 25px;
-    text-transform: uppercase;
-    font-size: x-large;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    font-family: "Bona Nova SC", serif;
-    
-}
-
-.subtitulo {
-    display: flex;
-    justify-content: center;
-    
-    & tr, td {
-        border: 2px, solid black;
-        padding: 10px;
-        text-align: center;
-        width: 300px;
-        font-family: "roboto", sans-serif;
-        font-size: 16px;            
-    }
-    & .cabecalho {
-        font-size: 20px;
-        text-transform: uppercase;
-        font-size: bolder;
-        background-color:rgb(23, 22, 22);
-        color: white;
-    }
-
-    & img {
-        width: 40px;
-        margin-right: 30px;
-    }
-    
-}
-
-.subtitulo2 {
-
-    display: inline-block;
-    margin-top: 5px;
-    margin-right: 50px;
-    
-    
-
-    & tr, td {
-        border: 2px, solid black;
-        padding: 10px;
-        text-align: center;
-        width: 300px;
-        font-family: "roboto", sans-serif;
-        font-size: 16px;     
-    }
-
-    & .cabecalho {
-        font-size: 20px;
-        text-transform: uppercase;
-        font-size: bolder;
-        background-color:rgb(23, 22, 22);
-        color: white;
-    }
-
-    & .pos {
-        width: 5px;
-    }
-
-    & .pos1 {
-        background-color: #ffffff;
-        width: 5px;
-        border: none;
-    }
-    
-    & .pos2 {
-        font-size: 20px;
-        text-transform: uppercase;
-        font-size: bolder;
-        background-color:rgb(23, 22, 22);
-        color: white; 
-    }
-
-
-}
-
-.nacionalidade{
-
-    & img {
-        width: 20px;
-        margin-right: 5px;
-    }
-}
-
-.center {
-    display: flex;
-    justify-content: center;
-    
-}
-
-footer{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 50px;
-    margin-bottom: 0;
-    padding: 20px;
-    
-    & h2 {
-    font-size: 25px;
-    text-transform: uppercase;
-    color: black;
-    font-family: "Bona Nova SC", serif;
-    }
-
-    & img {
-        width: 40px;
-        margin-right: 25px;
-        padding: 5px;
-        
-    }
-    
+  & img {
+    border-radius: 10px;
+    width: 300px;
+    margin-bottom: 30px;
+    filter: brightness(0.8);
+  }
 }
 
 .animacao {
-
-    font-size: 25px;
-    text-transform: uppercase;
-    color: black;
-    font-family: "Bona Nova SC",  sans-serif;
-    border-right: 1px solid;
-    white-space: nowrap;
-    width: 14ch;
-    overflow: hidden;
-    animation: animaTexto steps(13) 1s, animaMarcador 0.5s linear infinite;
-    margin-top: 5px;
-}
-
-footer {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-    margin-bottom: 0;
-    padding: 20px;
-    background: linear-gradient(to left, #c1c1c1, #000000);
-    font-size: 25px;
-    text-transform: uppercase;
-    font-family: "Bona Nova SC", serif;
-
-    & h2 {
-        color: white;
-    }
+  font-size: 25px;
+  text-transform: uppercase;
+  font-family: "Bona Nova SC", sans-serif;
+  border-right: 1px solid;
+  white-space: nowrap;
+  width: 14ch;
+  overflow: hidden;
+  animation: animaTexto steps(13) 1s, animaMarcador 0.5s linear infinite;
+  margin: 15px 15px;
 }
 
 @keyframes animaMarcador {
-    50% {
-        border-right: transparent;
-    }
+  50% {
+    border-right: transparent;
+  }
 }
 
 @keyframes animaTexto {
-    0% {
-        width: 0;
-    }
+  0% {
+    width: 0;
+  }
 }
 
-@media(max-width: 900px) {
+article {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  white-space: wrap;
+  font-family: "Roboto", sans-serif;
 
-    .container {
-        width: 100%;
-        overflow: hidden;
-    }  
+  & .collumm {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid yellow; */
+    text-align: center;
 
-    .header {
+    & .child{
+      /* border: 1px solid red; */
+      width: 50%;
+      text-align: center;
 
-        & img {
-            width: 30px;
-            margin-right: 15px;
-        }
-        & .logotitle {
-            display: flex;
-            align-items: center;
-            font-size: 20px;  
-            margin: 10px 30px 10px 10px;          
-        }   
+      & p {
+        padding: 20px 40px;
+      }
+
+      & h2 {
+        font-family: "Bona Nova SC", serif;
+        text-transform: uppercase;
+        font-size: 20px;
+        padding: 10px;
+        margin-top: 0;
+      }
     }
+  }
 
-    .topicos {
-        width: 100%;
-        padding: 8px 10px 8px 10px;
+  & .descript {
+  padding: 20px;
+  }
+}
 
-        & ul {
-            display: flex;
-            list-style: none;
-            justify-content: space-around;
-        }
+
+.topicos2 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 0;
+  padding: 10px;
+  background-color: rgb(204, 202, 202);
+  font-size: 40px;
+  text-transform: uppercase;
+  color: black;
+  font-family: "Bona Nova SC", serif;
+}
+
+.center-1{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.center2{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.titulo {
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-size: x-large;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-family: "Bona Nova SC", serif;
+}
+
+.subtitulo {
+  display: flex;
+  justify-content: center;
+
+  & tr,
+  td {
+    border: 1px, solid white;
+    padding: 10px;
+    text-align: center;
+    width: 300px;
+    font-family: "roboto", sans-serif;
+    font-size: 16px;
+  }
+  & .cabecalho {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-size: bolder;
+    background-color: rgb(204, 202, 202);
     
-        & li {
-            margin: 0;
-        }
-    
-        & li a{
-        font-size: 15px;
-        }  
+    & td{
+      color: black;
+      font-weight: bold;
     }
+  }
 
-    .animacao {
-        font-size: 12px;
-        margin: 5px 0 5px 10px;
+  & img {
+    width: 40px;
+    margin-right: 30px;
+  }
+}
+
+.subtitulo2 {
+  display: inline-block;
+  margin-top: 5px;
+  margin-right: 50px;
+
+  & tr,
+  td {
+    border: 1px, solid white;
+    padding: 10px;
+    text-align: center;
+    width: 300px;
+    font-family: "roboto", sans-serif;
+    font-size: 16px;
+  }
+
+  & .cabecalho {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-size: bolder;
+    background-color: rgb(204, 202, 202);
+    color: white;
+
+    & td{
+      color: black;
+      font-weight: bold;
     }
+  }
 
-    .fotos {
-        width: 100%;
+  & .pos {
+    width: 5px;
+  }
+
+  & .pos1 {
+    background-color: #1d1d1d;;
+    width: 5px;
+    border: none;
+
+    & td{
+      color: black;
+      font-weight: bold;
+    }
+  }
+
+  & .pos2 {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-size: bolder;
+    background-color: rgb(204, 202, 202);
+    color: white;
+  }
+}
+
+.nacionalidade {
+  & img {
+    width: 20px;
+    margin-right: 5px;
+  }
+}
+
+.center {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 900px) {
+  header {
+
+    & .logo-icon{
+      display: flex;
+      flex-direction: column;
+  
+      & .icon{
         display: flex;
-        justify-content: space-around;
-        
-        & img {
-            width: 110px;
-            margin: 0 10px 10px 10px;
-        }
-    }
-    
-    .historia{  
-        
-        font-family: "Roboto", sans-serif;
-    
-        & h2 {
-            margin: 10px 0 10px 10px;
-            font-size: 13px;
-        }
+        padding: 0;
+        gap: 10px;
 
+        & svg {
+          width: 30px;
+        }
+      }
+    }
+  
+    & .logo{
+      display: flex;
+      flex-direction: column;
+      padding: 5px auto;
+  
+      & img {
+        width: 40px;
+        margin: auto;
+      }
+      
+      & h1{
+        font-size: 30px;
+      }
+    }
+  
+    & nav{
+      
+      & ul {
+        display: flex;
+        list-style: none;
+        justify-content: center;
+      }
+  
+      & li a {
+        font-size: 15px;
+        padding: 5px 20px;
+      }
+    }
+  }
+  
+  .fotos {
+    overflow: hidden;
+  
+    & img {
+      width: 50%;
+    }
+  }
+  
+  .animacao {
+    font-size: 15px;
+  }
+
+  article {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  
+    & .collumm {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+  
+      & .child{
+        width: 100%;
+  
         & p {
-            font-size: 12px;
-            padding: 0px 10px 0px 10px;
+          padding: 0;
         }
-    }
-    .topicos2 {
-        margin: 10px auto;
-        padding: 8px 10px 8px 10px;
-        font-size: 18px;
-    }
-
-    .titulo {
-        font-size: 15px;
-    }
-    
-    .subtitulo {
-        width: 100%;
-        padding: auto 10px auto 10px;
-        
-        & tr, td {
-            border: 1px solid black;
-            padding: 2px 2px;
-            width: 100px;
-            font-size: 12px;    
-            text-align: center;     
-        }
-        & .cabecalho {
-            font-size: 20px;
-            padding: 0;
-        }
-    
-        & img {
-            width: 20px;
-            align-items: center;
-            padding: 0;
-            margin: 0;
-        }    
-    }
-    .subtitulo2 {
-        margin: 0;
-
-        & tr, td {
-            border: 1px solid black;
-            padding: 4px 4px;
-            width: 200px;
-            font-size: 12px;    
-            text-align: center; 
-            white-space: nowrap;
-            margin: 0;   
-        }
-        & .cabecalho {
-            font-size: 20px;
-            padding: 0;
-            margin: 0;
-        }
-    
-        & img {
-            width: 10px;
-            align-items: center;
-            padding: 0;
-            margin-right: 5px;
-        }
-
-        & .pos2 {
-        font-size: 11px;
-        }
-    }
-
-    .center {
-        display: flex;
-        flex-direction: column;
-        margin: 10px auto 10px 50px;
-    }
-
-    footer {
-        display: flex;
-        margin: 15px auto 0 10px;
-        padding: 2px 4px;
-        align-items: center;
-
-        & div {
-            display: flex;
-            justify-content: right;
-        }
-
+  
         & h2 {
-            font-size: 12px;
+          font-size: 15px;
+          padding: 10px;
+          margin-top: 0;
         }
-        
-        & img {
-            width: 25px;
-        }
+      }
     }
-}
 
+    & .descript {
+    width: 100%;
+    }
+  }
+  
+  .topicos2 {
+    padding: 10px;
+    font-size: 20px;
+  }
+  
+  .center-1{
+    width: 100%;
+  }
+  
+  .center2{
+    width: 100%;
+    margin-bottom: 40px;
+  
+  }
+  
+  .center-1 .subtitulo {
+    width: 50%;
+  
+    & tr,
+    td {
+      width: 100%;
+      font-size: 12px;
+    }
+    & .cabecalho {
+      width: 100%;
+      font-size: 12px;
+      
+      & td{
+        width: 100%;
+        font-size: 12px;
+      }
+    }
+  
+    & img {
+      width: 20px;
+      margin-right: 0;
+    }
+  }
+
+  .center2{
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+
+  .center2 .center{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  
+  .subtitulo2 {
+    width: 100%;
+    font-size: 12px;
+    margin-top: 0;
+    margin-right: 0;
+  
+    & tr,
+    td {
+      text-align: center;
+      font-size: 12px;
+    }
+  
+    & .cabecalho {
+      font-size: 12px;
+      text-transform: uppercase;
+      font-weight: 0;
+  
+      & td{
+        color: black;
+        font-weight: bold;
+        font-size: 12px;
+      }
+    }
+  
+    & .pos-t{
+      font-weight: bolder;
+      width: 5px;
+    }
+  
+    & .pos2 {
+      font-size: 12px;
+      font-weight: bolder;
+    }
+  }
+  
+  .nacionalidade {
+    & img {
+      width: 20px;
+      margin-right: 5px;
+    }
+  }
+  
+  .center2 .center {
+    margin: 0 auto;
+  }
+}
